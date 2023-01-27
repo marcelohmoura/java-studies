@@ -30,5 +30,21 @@ public class App {
         String resultado = nota >= 7 ? "Aprovado" : "Reprovado";
 
         System.out.println(resultado);
+
+        // Estrutura Switch Case
+        String planoTelefonia = "simples";
+
+        switch(planoTelefonia) {
+            case "simples":{
+                System.out.println("O plano selecionado foi: " + planoTelefonia);
+                break;
+            }
+            case "plus":{
+                System.out.println("O Plano selecionado foi: " + planoTelefonia);
+                break;
+            }
+            default:
+                System.out.println("Não existe plano de telefonia com o nome informado."); 
+        }
     }
 }
