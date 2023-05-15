@@ -1,4 +1,3 @@
-import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Main {
@@ -32,11 +31,8 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         String dataParaConversao = entrada.next();
 
-        try {
-            System.out.println("Digite a data a ser validada: " + data.dataValida(dataParaConversao));
-        }
-        catch (DateTimeParseException e) {
-            System.out.println("Data inválida.");
-        }
+        String resultado = data.dataValida(dataParaConversao) == true ? "Data válida." : "Data inválida.";
+
+        System.out.println(resultado);
     }
 }
